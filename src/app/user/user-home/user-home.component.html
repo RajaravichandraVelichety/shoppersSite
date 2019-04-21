@@ -1,0 +1,103 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div class="container">
+
+<div>
+    <carousel>
+     <slide>
+        <img src="assets/laptopforeveryneed.jpg" class="img-carousel" alt="third slide" style="display: block; width: 100%;">
+      </slide>
+      <slide>
+        <img src="assets/pcaccesories.jpg" class="img-carousel" alt="third slide" style="display: block; width: 100%;">
+      </slide>
+      <slide>
+        <img src="assets/dealoftheweek.jpg" class="img-carousel" alt="first slide" style="display: block; width: 100%;">
+      </slide>
+    </carousel>
+</div>
+<div><h1>Featured Partners</h1></div>
+<div>
+<mat-grid-list cols="5" rowHeight="80px">
+  
+ <mat-grid-tile>
+  <mat-card class="partners">
+  <mat-card-content>
+  <img mat-card-image src="../assets/amazon.png">
+  </mat-card-content>
+  </mat-card>
+  </mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card class="partners">
+  <mat-card-content>
+  <img mat-card-image src="../assets/shopclues.png">
+  </mat-card-content>
+  </mat-card>
+  </mat-grid-tile>
+
+<mat-grid-tile >
+  <mat-card class="partners">
+  <mat-card-content>
+  <img mat-card-image src="../assets/snapdeal.png">
+  </mat-card-content>
+  </mat-card>
+</mat-grid-tile>
+  
+  <mat-grid-tile >
+  <mat-card class="partners">
+  <mat-card-content>
+  <img mat-card-image src="../assets/jabong.png">
+  </mat-card-content>
+  </mat-card>
+  </mat-grid-tile>
+
+
+<mat-grid-tile >
+  <mat-card class="partners">
+  <mat-card-content>
+  <img mat-card-image src="../assets/ebay.png">
+  </mat-card-content>
+  </mat-card>
+    </mat-grid-tile>
+  
+ </mat-grid-list> 
+</div>
+
+<div><h1>best selling laptops</h1></div>
+
+
+<div>
+  <div *ngFor="let item of brandproducts">
+    <div class="col-md-3">
+      
+      <figure class="card card-product">
+        <div class="img-wrap"><img src="http://localhost:3000/uploads/{{item.image}}"></div>
+        <figcaption class="info-wrap">
+            <h4 class="title">{{item.name}}</h4>
+            
+            <div class="rating-wrap">
+              <div class="label-rating">132 reviews</div>
+              <div class="label-rating">154 orders </div>
+            </div> 
+        </figcaption>
+        <div class="bottom-wrap">
+          <div class="price-wrap h5">
+            <span class="price-new">{{item.price}}$</span>
+          </div>
+          <button class="btn btn-success btn-block" routerLink="/{{item.category}}/{{item.name}}" routerLinkActive="active" >Order Now</button>	
+        </div> 
+      </figure>
+      
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+

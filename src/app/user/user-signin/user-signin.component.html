@@ -1,0 +1,63 @@
+
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+
+<div class="container-fluid">
+    <div class="content-wrapper">	
+			
+				
+				<div class="col-md-12">
+          
+<div class="card">
+    <article class="card-body">
+    <h4 class="card-title mb-4 mt-1">Sign in</h4>
+       <form>
+        <div class="form-group">
+          <label>Your email</label>
+            <input class="form-control" type="email" placeholder="Enter your Email" [(ngModel)]="cemail"  id="cemail" name= "cemail">
+        </div> <!-- form-group// -->
+        <div class="form-group">
+          
+          <label>Your password</label>
+            <input class="form-control" type="password" placeholder="Enter the password" [(ngModel)]="cpassword"  id="cpassword" name= "cpassword">
+            <a class="float-right" href="#">Forgot password?</a>
+        </div> <!-- form-group// --> 
+        <div class="form-group"> 
+        <div class="checkbox">
+          <label> <input type="checkbox"> Save password </label>
+        </div> <!-- checkbox .// -->
+        </div> <!-- form-group// -->  
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" (click)="checklogin()" type="submit" > Login  </button>
+        </div> <!-- form-group// -->                                                           
+    </form>
+  
+    </article>
+    </div> <!-- card.// -->
+
+                </div>
+                
+                
+
+			
+		
+		
+</div>
+</div>
+
+
+<div *ngFor="let item of user">
+<div>
+        <img  src="http://localhost:3000/uploads/{{item.image}}" alt="" width="100" height="100"/>
+</div>
+
+<div>{{item.name}}</div>
+<div>{{item.email}}</div>
+</div>
+</body>
+

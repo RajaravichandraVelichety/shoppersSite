@@ -1,0 +1,30 @@
+  <div class="container"> 
+<div>
+  <mat-toolbar >  
+  <mat-toolbar-row class="displaybar">
+    <h1>{{brandname}}</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div>
+    <div *ngFor="let item of brandproducts">
+      <div class="col-md-3">
+        <figure class="card card-product">
+          <div class="img-wrap"><img src="http://localhost:3000/uploads/{{item.image}}"></div>
+          <figcaption class="info-wrap">
+              <h4 class="title">{{item.name}}</h4>
+          </figcaption>
+          <div class="bottom-wrap">
+           	
+            <button class="btn btn-danger btn-block" (click)="deleteproduct(item.name,brandname)" >delete product</button>
+          </div> 
+        </figure>
+        
+      </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+

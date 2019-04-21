@@ -1,0 +1,51 @@
+
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+
+
+
+
+
+<div>
+  <div *ngFor="let item of product">
+    <div class="col-md-3">
+      
+      <figure class="card card-product">
+        <div class="img-wrap"><img class="img-thumbnail" src="http://localhost:3000/uploads/{{item.image}}"></div>
+        
+        <div></div>
+        <div></div>
+        <figcaption class="info-wrap">
+            <h4 class="title ">{{item.name}}</h4>
+            
+            <div class="rating-wrap">
+                <div class="label-rating">132 reviews</div>
+                <div class="label-rating">154 orders </div>
+              </div> 
+            
+        </figcaption>
+
+        <div class="bottom-wrap">
+          <div class="price-wrap h5">
+            <span class="price-new">{{item.price}}</span>
+          </div>
+          <div></div>
+          <div></div>
+          <button class="btn btn-success btn-block" routerLink="/{{item.category}}/{{item.name}}" routerLinkActive="active" >Order Now</button>	
+        </div> 
+      </figure>
+      
+    </div>
+</div>
+</div>
+<div>
+<div >
+<div class="col-xs-12 col-12">
+  <pagination [totalItems]="totalItems"></pagination>
+</div>
+</div>
+</div>
+

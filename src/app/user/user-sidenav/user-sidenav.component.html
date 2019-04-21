@@ -1,0 +1,47 @@
+
+<div >
+  <header [mdcTopAppBar]="type" [fixedAdjust]="fixedAdjust">
+    <div mdcTopAppBarRow>
+      <section mdcTopAppBarSection alignStart>
+      
+        <button  mdcTopAppBarNavIcon class="material-icons" (click)="sidenav.toggle()">menu</button>
+        <h1 mdcTopAppBarTitle routerLink="/" routerLinkActive="active">CompareLaptop</h1>
+      </section>
+      <section mdcTopAppBarSection alignEnd>
+       
+
+       
+        <div class="col-md-offset-3">
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Search</label>
+            		<input type="text" class="form-control" [(ngModel)]="searchitem" name="searchitem" id="searchitem" placeholder=" Search by product">
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+            	</div>
+              
+            </form>
+        </div>
+    
+        
+      </section>
+    </div>
+  </header>
+  <main #fixedAdjust>
+    <mat-sidenav-container  >
+          <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+       
+            <mat-nav-list>
+              <a mat-list-item routerLink="/{{category.name}}" routerLinkActive="active" *ngFor="let category of categories"   id="brandname" name="brandname"> {{ category.name }}
+
+                   <mat-divider></mat-divider> 
+              </a>
+
+            </mat-nav-list>
+          </mat-sidenav>
+      
+          <mat-sidenav-content>
+            
+
+          </mat-sidenav-content>
+    </mat-sidenav-container>  
+  </main>

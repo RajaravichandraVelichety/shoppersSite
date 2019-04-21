@@ -1,0 +1,44 @@
+/*********************************************
+    			Call Bootstrap
+*********************************************/
+
+
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+
+/*********************************************
+					VIEW
+*********************************************/
+body{
+    text-emphasis-color: black;
+    
+    
+    background-color: black;
+}
+
+.card-title{
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.card{
+    height:450px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top:10px; 
+	margin-bottom: 25px;
+	border: 1px;
+    box-shadow: blue;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right:10px;
+    padding-bottom:25px;
+    padding-top:25px;
+}
+
+
+
+
+

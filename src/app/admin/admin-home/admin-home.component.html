@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div >
+  <header [mdcTopAppBar]="type" [fixedAdjust]="fixedAdjust">
+    <div mdcTopAppBarRow>
+      <section mdcTopAppBarSection alignStart>
+      
+        <span   class="glyphicon glyphicon-menu-hamburger btn btn-lg" (click)="sidenav.toggle()"></span>
+        <h1 mdcTopAppBarTitle routerLink="/admin" routerLinkActive="active">CompareLaptop</h1>
+      </section>
+      
+      <section mdcTopAppBarSection alignEnd>
+      
+        <span  class="glyphicon glyphicon-off btn btn-lg" (click)="logout()"></span>
+        
+      </section>
+
+    </div>
+  </header>
+  <main #fixedAdjust>
+    <mat-sidenav-container  >
+          <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+       
+            <mat-nav-list>
+              <a mat-list-item routerLink="/admin/addproduct" routerLinkActive="active" > Add product
+
+                   <mat-divider></mat-divider> 
+              </a>
+                <a mat-list-item > Delete product
+                  <mat-divider></mat-divider>  
+              </a>
+              <mat-nav-list style="margin-left:30px">
+                <a mat-list-item routerLink="/admin/deleteproduct/{{brand.name}}" routerLinkActive="active" *ngFor="let brand of brands" id="brandname" name="brandname"> {{ brand.name }}
+
+                <mat-divider></mat-divider> 
+              </a>
+              </mat-nav-list>
+            
+              
+            </mat-nav-list>
+          </mat-sidenav>
+      
+          <mat-sidenav-content>
+            <router-outlet></router-outlet>
+          </mat-sidenav-content>
+    </mat-sidenav-container>  
+  </main>
+  </div>
+
+  <section id="footer">
+		
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <div><h3 class="text-center">Follow us</h3></div>
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p>www.CompareLaptop.in</p>
+					<p class="h6">All right Reversed</p>
+				</div>
+				
+			</div>	
+	</section>
+
+
+
+
+
+

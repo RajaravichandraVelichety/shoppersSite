@@ -1,0 +1,57 @@
+
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ 
+ 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ 
+ <body>
+   
+<div class="card">
+  <article class="card-body mx-auto" style="width: 1200px;">
+    <h4 class="card-title mt-3 text-center">Create Account</h4>
+    <p class="text-center">Get started with your free account</p>
+    
+    <form>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+       </div>
+          <input class="form-control" type="text" placeholder="Full name" [(ngModel)]="cname"  id="cname" name= "cname">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+       </div>
+          <input class="form-control" type="email" placeholder="Email address" [(ngModel)]="cemail"  id="cemail" name= "cemail">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+      </div>
+      
+        <input class="form-control" type="text" placeholder="Phone number" [(ngModel)]="cphone"  id="cphone" name= "cphone">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+      </div>
+          <input class="form-control" type="password" placeholder="Create password" [(ngModel)]="cpassword"  id="cpassword" name= "cpassword">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+      </div>
+          <input class="form-control" type="password" placeholder="Reenter password">
+      </div> <!-- form-group// -->   
+      <div> <label for="image">profile picture</label>
+        <input type="file"  (change)="selectFile($event)"  [(ngModel)]="cimage"  id="cimage" name= "cimage" ></div> 
+        <br>                                  
+      <div class="form-group">
+          <button class="btn btn-primary btn-block" (click)="signup()" type="submit"> Create Account  </button>
+      </div> <!-- form-group// -->      
+      <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
+  </form>
+  </article>
+  </div> <!-- card.// -->
+  
+</body>

@@ -1,0 +1,42 @@
+<div class="container form">
+    <h1>Product Form</h1>
+    <form >
+      <div class="form-group">
+
+        
+        <label for="Category">Product main Category</label>
+        <input type="text" class="form-control" [(ngModel)]="pItemCategory"  id="pItemCategory" name= "pItemCategory">
+    
+        
+        <label for="Sub Category">product sub Category</label>
+        <input type="text" class="form-control" [(ngModel)]="pItemSubCategory"  id="pItemSubCategory" name= "pItemSubCategory">
+
+        <label for="brand">Brand</label>
+        <input type="text" class="form-control" [(ngModel)]="pItemBrand"  id="pItemBrand" name="pItemBrand">
+   
+
+        <label for="name">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="pItemName"  id="pItemName" name= "pItemName">
+    
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" [(ngModel)]="pItemPrice"  id="pItemPrice" name= "pItemPrice">
+      
+
+        <div> <label for="image">Image</label>
+        <input type="file"  (change)="selectFile($event)"  [(ngModel)]="pItemImage"  id="pItemImage" name= "pItemImage" ></div>
+      
+
+         <label for="description">Description</label>
+        <textarea row="20" cols="50" class="form-control" [(ngModel)]="pItemDescription"  id="pItemDescription" name= "pItemDescription">
+          </textarea>
+      </div>
+    </form>
+
+      <section>
+      <button mdcButton raised  (click)="intoitem()" (click)="openSnackBar()">Add</button>
+      </section>
+
+      <section>
+      
+      </section>
+</div>
